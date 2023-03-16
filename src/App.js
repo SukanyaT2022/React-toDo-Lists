@@ -12,7 +12,7 @@ const App = () => {
 //below we use to do like empty buckeyt to hold value and use setTodo to change or update value inside todo
 const [todo,setTodo] = useState("")
 
-//then move from todo container line 13 to moretodo below line by using setMoreTodo --put in array look useSate([])
+//array-then move from todo container line 13 to moretodo below line by using setMoreTodo --put in array look useSate([])
 const [moretodo,setMoreTodo] = useState([])
 
 //below we use this function addTodo to push from todo to Moretodo using setMoreTodo
@@ -21,14 +21,17 @@ const addTodo = ()=>{
   // ...is spread Operator es6 means copy evertyhitng in the same array then add  new intem to it
 
 }
-console.log("moretodo",moretodo)
+// console.log(moretodo)
+//this line above for test purpose
   return (
     <div className="mainBox" >
-    
+
+
+
 <Card style={{width :"800px", backgroundColor:"grey"  }}>
 <h2 className='title'>To Do Lists</h2>
 <div className='inputText'>
-<InputGroup className="mb-3 ">
+<InputGroup className="m-auto ">
         <Form.Control class="inputB"
           placeholder="To Do" 
           //below line 13 todo name="todo"
@@ -39,17 +42,18 @@ console.log("moretodo",moretodo)
 //setTodo like like 13
    onChange={(e)=>{setTodo(e.target.value)}}
         />
-        <Button variant="outline-secondary" id="button-addon2" onClick={addTodo}>
+        <Button onClick={addTodo}>
           {/* //{addTodo line 17 function} */}
        Add
         </Button>
       </InputGroup>
       </div>
-      <Cards/>
 
 
 
-
+      {/* this below line is child component-
+      we put prop more to do below- first more2do is just a name-{moretodo} is array  */}
+      <Cards more2do = {moretodo}/>
 
 
 </Card>
@@ -59,3 +63,5 @@ console.log("moretodo",moretodo)
 
 export default App
 
+//app.js is child of index
+//app.js is parent of cards.js coz
