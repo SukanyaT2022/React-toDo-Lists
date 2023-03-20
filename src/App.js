@@ -23,6 +23,20 @@ const addTodo = ()=>{
 }
 // console.log(moretodo)
 //this line above for test purpose
+
+//below is delete button function
+const deleteTodo =(value)=>{
+  //below id filter todo array and put inside new variable --lfrom line 16 more to do array
+  //filter out what we donot want use below function
+  // we sent this function to Cards.js by proc put at onlick ={} section--lookline 71
+  const newMoreToDo = moretodo.filter((item)=>{
+   return  item != value;
+  })
+  
+}
+
+
+
   return (
     <div className="mainBox" >
 
@@ -53,8 +67,9 @@ const addTodo = ()=>{
 
       {/* this below line is child component-
       we put prop more to do below- first more2do is just a name-{moretodo} is array  */}
-      <Cards more2do = {moretodo}/>
-
+      {/* name what ever i want = {function inside} */}
+      <Cards deleteTwoDo = {deleteTodo} more2do = {moretodo}/>
+  
 
 </Card>
     </div>

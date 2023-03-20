@@ -1,0 +1,6 @@
+.mainBox{
+    display: flex;
+}
+.mainBox button{
+    margin-left: 20px;
+}
