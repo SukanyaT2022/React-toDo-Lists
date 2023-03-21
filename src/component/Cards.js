@@ -14,7 +14,7 @@ function Cards({ more2do,deleteTwoDo }) {
         {more2do.map((m) => {
           return (
             <ul>
-              <div className='mainBox'>
+              <div className='bigBox m-auto' >
              <div className='list'>{m}</div>
              <div className='deleteButton' ><Button variant="success" onClick={()=>{deleteTwoDo(m)}}>Delete</Button></div>
             {/* delete come from name App.js page line 71 and this page line 7 in () */}

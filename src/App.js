@@ -40,13 +40,11 @@ const deleteTodo =(value)=>{
   return (
     <div className="mainBox" >
 
-
-
-<Card style={{width :"800px", backgroundColor:"grey"  }}>
+<Card style={{width :"800px"  }}>
 <h2 className='title'>To Do Lists</h2>
 <div className='inputText'>
 <InputGroup className="m-auto ">
-        <Form.Control class="inputB"
+        <Form.Control class="inputB" style={{width :"300px", height:"30px" , fontSize: '15px'  }}
           placeholder="To Do" 
           //below line 13 todo name="todo"
           name="todo"
@@ -56,7 +54,7 @@ const deleteTodo =(value)=>{
 //setTodo like like 13
    onChange={(e)=>{setTodo(e.target.value)}}
         />
-        <Button onClick={addTodo}>
+        <Button onClick={addTodo} style={{width :"100px", height:"35px"  }}    >
           {/* //{addTodo line 17 function} */}
        Add
         </Button>
