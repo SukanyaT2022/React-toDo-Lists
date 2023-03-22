@@ -31,17 +31,16 @@ const deleteTodo =(value)=>{
   // we sent this function to Cards.js by proc put at onlick ={} section--lookline 71
   const newMoreToDo = moretodo.filter((item)=>{
    return  item != value;
-  })
-  
+  });
+  setMoreTodo(newMoreToDo);
+//after filter new array go to newMoreToDo
 }
-
-
 
   return (
     <div className="mainBox" >
 
 <Card style={{width :"800px"  }}>
-<h2 className='title'>To Do Lists</h2>
+<h2 className='title'>Things to Be Done</h2>
 <div className='inputText'>
 <InputGroup className="m-auto ">
         <Form.Control class="inputB" style={{width :"300px", height:"30px" , fontSize: '15px'  }}
