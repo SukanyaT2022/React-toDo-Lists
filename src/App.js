@@ -30,7 +30,7 @@ const deleteTodo =(value)=>{
   //filter out what we donot want use below function
   // we sent this function to Cards.js by proc put at onlick ={} section--lookline 71
   const newMoreToDo = moretodo.filter((item)=>{
-   return  item != value;
+   return  item !== value;
   });
   setMoreTodo(newMoreToDo);
 //after filter new array go to newMoreToDo
